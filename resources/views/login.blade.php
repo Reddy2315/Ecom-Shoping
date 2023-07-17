@@ -1,10 +1,10 @@
 @extends('master')
 @section('content')
-<div class="container p-5">
+<div class="container p-5 detail-wrapper">
     <div class="row justify-content-md-center">
             <div class="col-sm-4 col-sm-offset-4">
                 <form action="login" method="POST">
-                <div class="mb-3 form-group">
+                <div class="mb-3">
                     @csrf
                     <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">

@@ -16,10 +16,49 @@
 </head>
 <body>
     {{View::make('header')}}
+    
     @yield('content')
+
     {{View::make('footer')}}
 </body>
+    <style>
+        img.slider-img{
+            height:400px !important;
+        }   
 
+        .custom-product{
+            height:750px;
+        }
+        .slider-text{
+            background-color : #35443585 !important;
+        }
+        .trending-wrapper{
+            margin:15px;
+            padding:10px;
+            height:600px;
+        }
+         .trending-item{
+            float:left;
+            width:16.5%;
+            text-align:center;
+        }
+        .trending-image{
+            height:100px;
+        } 
+        .trending-name{
+            text-align:center;
+        }
+        .detail-img{
+            height:400px;  
+        }
+        .search-box{
+            width:500px;
+        }
+        .detail-wrapper{
+            height:600px;
+        }
+    </style>
+</html>
 <!-- <script>
     $(document).ready(function()
     {
@@ -29,4 +68,3 @@
         })
     })
     </script> -->
-</html>
