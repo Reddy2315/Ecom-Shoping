@@ -36,7 +36,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link active text-decoration-none" aria-current="page" href="/cartlist">Cart({{$total}})</a>
+            <a class="nav-link active text-decoration-none e-3" aria-current="page" href="/cartlist">Cart({{$total}})</a>
           </li>
 
           @if(Session :: has('user'))
@@ -49,8 +49,13 @@
               </ul>
           </li>
             @else
+            <!-- e-3 e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL 
+                 s-3 s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL-->
+            <li class="nav-item e-3">
+            <a class="nav-link active text-decoration-none" aria-current="page" href="/login">Login</a>
+            </li>
             <li class="nav-item">
-            <a class="nav-link active text-decoration-none" aria-current="page" href="/login">login</a>
+            <a class="nav-link active text-decoration-none" aria-current="page" href="/register">Register</a>
             </li>
             @endif
         </ul>
