@@ -55,7 +55,24 @@
             width:500px;
         }
         .detail-wrapper{
-            height:600px;
+            height:700px;
+        }
+        .cartlist-page{
+            height: 2000px;;
+            
+
+        }
+        .cartlist-wrapper{
+            float:left;  
+        }
+        .cartlist-item{
+            height:200px;
+            text-align:center;
+        }
+        .cart-list-divider{
+            border-bottom:1px solid #ccc;
+            margin-bottom :20px;
+            padding-bottom :20px;
         }
     </style>
 </html>

@@ -36,13 +36,13 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link active text-decoration-none" aria-current="page" href="">Cart({{$total}})</a>
+            <a class="nav-link active text-decoration-none" aria-current="page" href="/cartlist">Cart({{$total}})</a>
           </li>
 
           @if(Session :: has('user'))
 
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['name']}}
+              <a class="dropdown-toggle" data-toggle="dropdown" href="">{{Session::get('user')['name']}}
               </a>
               <ul class="dropdown-menu">
                 <li><a href="/logout">Logout</a></li>
@@ -56,5 +56,4 @@
         </ul>
     </div>
   </div>
-</nav>
-
+</nav> 
