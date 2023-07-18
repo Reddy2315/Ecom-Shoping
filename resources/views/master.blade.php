@@ -27,7 +27,7 @@
         }   
 
         .custom-product{
-            height:750px;
+            height:800px;
         }
         .slider-text{
             background-color : #35443585 !important;
@@ -43,13 +43,13 @@
             text-align:center;
         }
         .trending-image{
-            height:100px;
+            height:150px;
         } 
         .trending-name{
             text-align:center;
         }
         .detail-img{
-            height:400px;  
+            height:350px;  
         }
         .search-box{
             width:500px;

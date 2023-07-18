@@ -1,7 +1,11 @@
 <?php
-use App\Http\Controllers\ProductController;
-$total = ProductController::cartItem();
-?>
+  use App\Http\Controllers\ProductController;
+  $total=0;
+  if(Session::has('user'))
+  {
+    $total= ProductController::cartItem();
+  }
+  ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand text-primary font-weight-bold text-uppercase" href="/"><b><big>Ecom-Shop</big></b></a>
@@ -15,7 +19,7 @@ $total = ProductController::cartItem();
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active text-decoration-none" aria-current="page" href="">Products</a>
+            <a class="nav-link active text-decoration-none" aria-current="page" href="/">Products</a>
           </li>
 
           <li class="nav-item">
@@ -34,7 +38,23 @@ $total = ProductController::cartItem();
           <li class="nav-item">
             <a class="nav-link active text-decoration-none" aria-current="page" href="">Cart({{$total}})</a>
           </li>
+
+          @if(Session :: has('user'))
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['name']}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+          </li>
+            @else
+            <li class="nav-item">
+            <a class="nav-link active text-decoration-none" aria-current="page" href="/login">login</a>
+            </li>
+            @endif
         </ul>
     </div>
   </div>
 </nav>
+

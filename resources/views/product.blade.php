@@ -44,7 +44,7 @@
 </div>
 
       <div class="trending-wrapper">
-      <h3>Trending Products</h3>
+      <h2 class="p-3 mb-2 bg-light text-dark font-weight-bold">Trending Products</h2>
         @foreach($products as $item)
             <div class="trending-item p-3">
             <a href="detail/{{$item['id']}}">
@@ -54,7 +54,7 @@
               </div>
             </a>
             </div>
-              @endforeach
-          </div>
-  </div>  
+        @endforeach
+      </div>
+</div>  
 @endsection
